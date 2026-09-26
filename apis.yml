@@ -1,23 +1,82 @@
 aid: atom-bank-plc
+
 name: Atom Bank plc
-description: 'Atom Bank plc is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://eu-images.contentstack.com/v3/assets/bltdab5bf2080bb23ac/blt8988f6b1beda5123/69ef4ac36aa0d702ac086189/atom-bank-preview-purple-background.jpg
+
+description: 'Atom Bank plc is a UK‑based digital‑only bank founded in 2014 and launched in 2016. It offers savings accounts, mortgages and business loans through a mobile‑first app, emphasizing speed, low fees and competitive rates. Regulated by the FCA and PRA with FSCS protection, Atom Bank focuses on technology‑driven banking experiences, biometric security and real‑time notifications. The bank serves personal and SME customers across the United Kingdom, providing products such as Cash ISAs, Instant Savers, Fixed Savers, mortgages and commercial loans.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atom-bank-plc/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Banking
+- DigitalBank
+- UK
+- FinTech
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/atom-bank-plc-atombank-security.txt
+- type: WellKnown
+  url: well-known/atom-bank-plc-well-known.yml
+- type: Hosts
+  url: hosts/atom-bank-plc-hosts.yml
+- type: Vendors
+  url: vendors/atom-bank-plc-vendors.yml
+- type: TermsOfService
+  url: https://www.atombank.co.uk/terms/
+- type: Support
+  url: https://www.atombank.co.uk/help/faqs/
+- type: StatusPage
+  url: https://atombank.statuspage.io/
+- type: Security
+  url: https://www.atombank.co.uk/security/
+- type: Newsroom
+  url: https://www.atombank.co.uk/newsroom/
+- type: DeveloperPortal
+  url: https://portal.atombank.co.uk/
+- type: Blog
+  url: https://www.atombank.co.uk/blog/
+- type: GitHubOrganization
+  url: https://github.com/atombank
+- type: DomainSecurity
+  url: security/atom-bank-plc-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.atombank.co.uk/
+
+apis: []
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: Developer portal requires login to access API documentation
+  evidence:
+    - url: https://portal.atombank.co.uk/
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

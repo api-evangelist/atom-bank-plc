@@ -1,0 +1,77 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 2
+  other_domain: 2
+  platform: 1
+  roles:
+  - api
+  - portal
+  - source
+  - status
+  - website
+hosts:
+- host: api.co.uk
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.co.uk
+  role: api
+  relation: other-domain
+- host: atombank.statuspage.io
+  found_by:
+  - pointer
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: statuspage.io
+  role: status
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: portal.atombank.co.uk
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: atombank.co.uk
+  role: portal
+  relation: own
+- host: www.atombank.co.uk
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - Support
+  - Security
+  - Newsroom
+  - Blog
+  - Website
+  serves:
+  - cdn
+  vendor: imperva
+  registrable_domain: atombank.co.uk
+  role: website
+  relation: own
