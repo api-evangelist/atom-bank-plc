@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/atom-bank-plc/integrations
+- https://n8n.io/integrations/atom-bank-plc/
+- https://composio.dev/toolkits/atom-bank-plc
+- https://monid.ai/tools/atom-bank-plc
+checked:
+- https://composio.dev/toolkits/atom-bank-plc
+- https://monid.ai/tools/atom-bank-plc
+- https://n8n.io/integrations/atom-bank-plc/
+- https://zapier.com/apps/atom-bank-plc/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
